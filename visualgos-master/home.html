@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Pathfinding Visualizer</title>
+  <script src="https://use.fontawesome.com/872b3d4c1a.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/index.css" />
+</head>
+
+<body>
+  <div id="header">
+    <h1>Path Finder</h1>
+    <div class='buttons'>
+      <a href="https://www.github.com/justinsuen/visualgos">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/justin-suen-6a258669">
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="sidebar">
+      <div class="instructions">
+        <h2>Instructions</h2>
+        <p>1. Select algorithm</p>
+        <p>2. Click grid</p>
+        <p>3. Wait</p>
+      </div>
+      <div class="options">
+        <label>Algorithm:</label>
+        <select id="selectAlgo" name="selectAlgo">
+          <option value="AStar">A* search</option>
+          <option value="BFS">Breadth-first search</option>
+          <option value="DFS">Depth-first search</option>
+        </select>
+
+        <label>Grid size:</label>
+        <select id="selectGridSize" name="selectGridSize">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="40" selected>40</option>
+          <option value="60">60</option>
+          <option value="80">80</option>
+        </select>
+
+        <div class="legend">
+          <label>Legend:</label>
+          <ul>
+            <li><div class="lgd-cell start"></div><p>Start</p></li>
+            <li><div class="lgd-cell end"></div><p>End</p></li>
+            <li><div class="lgd-cell closed"></div><p>Visited</p></li>
+            <li><div class="lgd-cell path"></div><p>Path</p></li>
+            <li><div class="lgd-cell block"></div><p>Blocked</p></li>
+          </ul>
+        </div>
+      </div>
+      <button id="new-maze-btn">Generate Maze</button>
+    </div>
+    <div id="main">
+      <div id="grid">Loading grid...</div>
+    </div>
+
+    <br class="clear"/>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+  <script src="./bundle.js"></script>
+</body>
+
+</html>
